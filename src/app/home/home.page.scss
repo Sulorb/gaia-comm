@@ -1,1 +1,17 @@
-
+// BIRDS________
+.bird {
+    position: absolute;
+    z-index: 3;
+    transform: scaleX(-1);
+    animation: fly 5s linear 1 normal forwards running; // width: 50px;
+    //    right: -50px;
+    transform-origin: 50% 50%;
+}
+@keyframes fly {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 150%;
+    }
+}

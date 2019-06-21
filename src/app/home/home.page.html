@@ -1,14 +1,51 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Join Gaïa
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+
+  <ion-card text-center style="position: fixed; z-index: 5; bottom: 30px; background: aquamarine; width: 50%;">
+  <ion-card-header>Continue d'agir</ion-card-header>
+  <ion-card-content>
+    <p>{{texte}}</p>
+    <ion-button>Je sauve la planète</ion-button>
+  </ion-card-content>
+  </ion-card>
+
+
+  <h1 style="position: absolute; top: 10px; left: 10px; z-index: 3; text-shadow: 0px 0px 15px darkgreen; color: whitesmoke;" no-margin>
+    {{ counter > 0 ? counter : ''}}</h1>
+
+  <h3 text-center>Préservons la planète</h3>
+
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/qurZsb1Lh1U" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <ion-button expand="full" shape="round">Rejoignez Gaïa</ion-button>
+
+  <h5>Quelques chiffres</h5>
+  <p>Blablabla l'écologie c'est important parce que sans Terre on ne fume plus</p>
+
+  <h5>Quelques chiffres</h5>
+  <p>Blablabla l'écologie c'est important parce que sans Terre on ne fume plus</p>
+
+  <h5>Quelques chiffres</h5>
+  <p>Blablabla l'écologie c'est important parce que sans Terre on ne fume plus</p>
+
+  <h5>Quelques chiffres</h5>
+  <p>Blablabla l'écologie c'est important parce que sans Terre on ne fume plus</p>
+
+  <h5>Quelques chiffres</h5>
+  <p>Blablabla l'écologie c'est important parce que sans Terre on ne fume plus</p>
+
+  <ion-button expand="full" shape="round">Rejoignez Gaïa</ion-button>
+
+  <img *ngFor="let bird of birds; let i = index" [src]="birdImage(bird)" class="bird" [style.left]="bird.left" [style.width]="bird.width"
+    [style.animation-play-state]="bird.pause" (click)="kill(bird)">
+
+
 </ion-content>
